@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: desilva <dede-2231@hotmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 05:03:26 by desilva           #+#    #+#             */
-/*   Updated: 2022/03/06 15:35:44 by desilva          ###   ########.fr       */
+/*   Created: 2022/03/10 22:05:46 by desilva           #+#    #+#             */
+/*   Updated: 2022/03/10 22:08:48 by desilva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	in;
-	int	tam;
-	int	res;
+#include <unistd.h>
 
-	in = 0;
-	tam = size - 1;
-	while (in < tam)
+void	ft_put_putnbr(int nb);
+
+void	ft_put_putnbr(int nb)
+{
+	char	cb;
+
+	if (nb / 10 != 0)
 	{
-		res = tab[in];
-		tab[in] = tab[tam];
-		tab[tam] = res;
-		tam--;
-		in++;
+		ft_put_putnbr(nb / 10);
 	}
+	cb = (nb % 10) + 48;
+	write(1, &cb, 1);
 }
+
+/*
+#include <stdio.h>
+int	main(void)
+{
+	ft_put_putnbr(30679);
+	printf("\n");
+}
+*/

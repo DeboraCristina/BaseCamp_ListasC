@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: desilva <dede-2231@hotmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 04:52:26 by desilva           #+#    #+#             */
-/*   Updated: 2022/02/10 04:59:39 by desilva          ###   ########.fr       */
+/*   Created: 2022/03/06 11:51:55 by desilva           #+#    #+#             */
+/*   Updated: 2022/03/06 11:51:57 by desilva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@ int	ft_strlen(char *str)
 {
 	int	cont;
 
-	cont = 1;
-	while (*(str + cont) != 0)
-	{
-		cont++;
-	}
-	return (cont);
+	cont = 0;
+	while (str[cont++])
+		;
+	return (--cont);
 }

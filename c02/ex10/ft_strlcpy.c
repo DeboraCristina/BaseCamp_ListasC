@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: desilva <dede-2231@hotmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/10 05:03:26 by desilva           #+#    #+#             */
-/*   Updated: 2022/03/06 15:35:44 by desilva          ###   ########.fr       */
+/*   Created: 2022/03/15 09:31:21 by desilva           #+#    #+#             */
+/*   Updated: 2022/03/15 10:29:23 by desilva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_rev_int_tab(int *tab, int size)
-{
-	int	in;
-	int	tam;
-	int	res;
+#include <stdio.h>
 
-	in = 0;
-	tam = size - 1;
-	while (in < tam)
-	{
-		res = tab[in];
-		tab[in] = tab[tam];
-		tab[tam] = res;
-		tam--;
-		in++;
-	}
+void	ft_strlcpy()
+{
+	printf("Ola, mundo!\n");
 }
