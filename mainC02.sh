@@ -191,11 +191,8 @@ main='
 int	main(void)
 {
 	char	*frase;
-	char	*car;
 
-	car = "\\n";
-	printf("%s\\n", ft_chartohex(car[0]));
-	frase = "Ola, Mundo!\\n Turu Baum\\0";
+	frase = "Oi\\nvoce esta bem?";
 	ft_putstr_non_printable(frase);
 	printf("\\n");
 }
@@ -207,7 +204,10 @@ main='
 #include <string.h>
 int	main(void)
 {
-	printf("Não fiz. E não VOU fazer!");
+	char	c;
+
+	printf("%p", &c);
+	printf("\\n");
 }
 '
 fi

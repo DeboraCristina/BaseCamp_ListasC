@@ -27,35 +27,35 @@ void	ex01()
 }
 void	ex02()
 {
-   char source[ ] = " fresh2refresh" ;
-   char target[ ]= " C tutorial" ;
-   printf ( "Source string = %s\n", source ) ;
-   printf ( "Target string = %s\n", target ) ;
-   strcat ( target, source ) ;
-   printf ( "Target string after strcat( ) = %s\n", target ) ;
-
-   char ft_source[ ] = " fresh2refresh" ;
-   char ft_target[ ]= " C tutorial" ;
-   printf ( "Source string = %s\n", ft_source ) ;
-   printf ( "Target string = %s\n", ft_target ) ;
-   ft_strcat ( ft_target, ft_source ) ;
-   printf ( "Target string after strcat( ) = %s\n", ft_target ) ;
+	char source[ ] = " fresh2refresh" ;
+	char target[ ]= " C tutorial" ;
+	printf ( "Source string = %s\n", source ) ;
+	printf ( "Target string = %s\n", target ) ;
+	strcat ( target, source ) ;
+	printf ( "Target string after strcat( ) = %s\n", target ) ;
+	
+	char ft_source[ ] = " fresh2refresh" ;
+	char ft_target[ ]= " C tutorial" ;
+	printf ( "Source string = %s\n", ft_source ) ;
+	printf ( "Target string = %s\n", ft_target ) ;
+	ft_strcat ( ft_target, ft_source ) ;
+	printf ( "Target string after strcat( ) = %s\n", ft_target ) ;
 }
 void	ex03()
 {
-   char source[ ] = " fresh2refresh" ;
-   char target[ ]= " C tutorial" ;
-   printf ( "Source string = %s\n", source ) ;
-   printf ( "Target string = %s\n", target ) ;
-   strncat ( target, source, 5 ) ;
-   printf ( "Target string after strcat( ) = %s\n", target ) ;
-
-   char ft_source[ ] = " fresh2refresh" ;
-   char ft_target[ ]= " C tutorial" ;
-   printf ( "Source string = %s\n", ft_source ) ;
-   printf ( "Target string = %s\n", ft_target ) ;
-   ft_strncat ( ft_target, ft_source, 5 ) ;
-   printf ( "Target string after strcat( ) = %s\n", ft_target ) ;
+	char source[ ] = " fresh2refresh" ;
+	char target[ ]= " C tutorial" ;
+	printf ( "Source string = %s\n", source ) ;
+	printf ( "Target string = %s\n", target ) ;
+	strncat ( target, source, 5 ) ;
+	printf ( "Target string after strcat( ) = %s\n", target ) ;
+	
+	char ft_source[ ] = " fresh2refresh" ;
+	char ft_target[ ]= " C tutorial" ;
+	printf ( "Source string = %s\n", ft_source ) ;
+	printf ( "Target string = %s\n", ft_target ) ;
+	ft_strncat ( ft_target, ft_source, 5 ) ;
+	printf ( "Target string after strcat( ) = %s\n", ft_target ) ;
 }
 void	ex04()
 {

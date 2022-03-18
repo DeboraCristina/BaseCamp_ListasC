@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_non_printable.c                          :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: desilva <dede-2231@hotmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/15 21:30:00 by desilva           #+#    #+#             */
-/*   Updated: 2022/03/16 09:45:40 by desilva          ###   ########.fr       */
+/*   Created: 2022/03/16 09:43:52 by desilva           #+#    #+#             */
+/*   Updated: 2022/03/16 20:48:16 by desilva          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,25 +50,19 @@ char	*ft_chartohex(char *res, int c)
 	return (res);
 }
 
-void	ft_putstr_non_printable(char *str);
 
-void	ft_putstr_non_printable(char *str)
+void	*ft_print_memory(void *addr)
 {
-	char	c;
+	char	separador;
 	char	hex[2];
 
-	c = 0;
-	while (str[c])
+	separador = 0;
+	while (separador <= 32)
 	{
-		if (ft_str_is_printable(str[c]))
-			ft_putchar(str[c]);
-		else
-		{
-			ft_putchar(92);
-			ft_chartohex(hex, str[c]);
-			ft_putchar(hex[0]);
-			ft_putchar(hex[1]);
-		}
-		++c;
+		if (separador % 4 == 0)
+			ft_putchar(' ');
+		ft_chartohex(hex, addr[separador]);
+		ft_putchar(hex[0]);
+		ft_putchar(hex[1]);
 	}
 }
