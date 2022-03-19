@@ -3,8 +3,11 @@
 clear
 
 echo Insira o número \do exercício
-#read ex
-ex=3
+ex=$1
+if [ -z $1 ]
+then
+	ex=0
+fi
 
 if [ $ex -eq 0 ]; then
 main='#include "ft_strlen.c"
@@ -47,13 +50,21 @@ int    ft_atoi(char *str);
 
 int    main(void)
 {
-    //printf("%d\\n", ft_atoi(" ---+--1234ab567"));
-    printf("%d\\n", ft_atoi("1"));
+	char	*c;
+
+	c = "   ++--+15";
+    printf("%d\\n", ft_atoi(" ---+--1234ab567"));
+    printf("%d\\n", ft_atoi(c));
 }'
 fi
 
-
-echo Testando EX0$ex...
-
-echo -e "$main" > ex0$ex/main.c
-gcc -Wall -Wextra -Werror ex0$ex/main.c ; ./a.out ; rm ex0$ex/main.c
+if [ $ex -ge 10 ]
+then
+	echo Testando EX$ex...
+	echo -e "$main" > c04/ex$ex/main.c
+	gcc -Wall -Wextra -Werror c04/ex$ex/main.c ; ./a.out ; rm ./a.out ; rm c04/ex$ex/main.c
+else
+	echo Testando EX0$ex...
+	echo -e "$main" > c04/ex0$ex/main.c
+	gcc -Wall -Wextra -Werror c04/ex0$ex/main.c ; ./a.out ; rm ./a.out ; rm c04/ex0$ex/main.c
+fi
